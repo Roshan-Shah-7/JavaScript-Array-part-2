@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+
+
+    <script>
+        // The Array object, as with arrays in other programming languages, 
+        // enables storing a collection of multiple items under a single variable name, 
+        // and has members for performing common array operations.
+        let arr = [5, 3, 9, 'Hello', 1.11, true];
+        // JavaScript arrays are resizable and can contain a mix of different data types.
+        console.log(arr); // It show all elements
+
+        // to grab a particular element we need index and array's index starts with index 0
+        console.log(arr[3]);
+
+        // Another way of declaring
+        let arr2 = new Array(1, 2, 3, 4, 5, 6)
+        console.log(arr2);
+
+
+        // Methods:
+        // push() : to add element in an array. It add element at last
+        arr2.push(10)
+        console.log(arr2);
+
+        // pop(): it remove last element of an array
+        arr2.pop();
+        console.log(arr2);
+
+        //unshift() : it also add element in an array but at the begining
+        arr2.unshift(9)
+        console.log(arr2);
+
+        // shift(): its like pop() it remove starting element of an array
+        arr2.shift()
+        console.log(arr2);
+
+        console.log(arr2.includes(9)); // includes is to compare and gives answer in true and false
+        // so in this case 9 is not in my array
+
+        console.log(arr2.indexOf(3)); // to find the element of the element
+
+        // join(): it copy the another array elements and covert them in to a string which is 
+        // seperated by a comma(,)
+        let newArray = arr.join()
+        console.log(newArray);
+        console.log(typeof newArray);
+
+
+        // slice, splice:
+        // slice() method returns a shallow copy of part of an array 
+        // into a new array object selected from beginIndex
+        // up to endIndex (endIndex is not included).
+        // The original array will not be modified.
+        let slicedArr = arr.slice(1, 4)
+        console.log(slicedArr);
+
+        // splice() method changes the contents of an array by 
+        // removing or replacing existing elements
+        // and/or adding new elements in place
+        // An important thing about splice() is that it always
+        // modifies the actual array
+        // In the below code we are deleting the first two elements
+        // and then inserting "Hello" and "World"
+        let arrSplice = arr.splice(0, 2, 'Hello', 'World')
+        console.log(arrSplice);
+
+    </script>
+</body>
+
+</html>
